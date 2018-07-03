@@ -28,3 +28,12 @@ $factory->define(App\Residencias::class, function (Faker\Generator $faker) {
     ];
 });
 
+
+$factory->define(App\Coletas::class, function (Faker\Generator $faker) {
+    return [
+        'CL_DATA' => $faker->dateTimeThisMonth,
+        'CL_CONSUMO' => $faker->streetSuffix,
+        'CL_MES' => $faker->month,
+    ];
+});
+

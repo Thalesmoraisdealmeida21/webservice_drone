@@ -22,4 +22,9 @@ class Residencias extends Model
         'RD_DTUCOLETA',
     ];
 
+
+    public function coletas(){
+        return $this->hasMany(Residencias::class);
+    }
+
 }

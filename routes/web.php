@@ -15,19 +15,15 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-/*
- *
- *
- * ===========ROTAS A DEFINIR===================
- *
- * -> CAPTURA A COLETA
- * -> GRAVA NOVA RESIDENCIA
- * -> SINCRONIZA DADOS COM CENTRAL
- * -> RETORNA DATA E HORA DA ULTIMA COLETA
- * -> RETORNA CASOS DE FALHA
-*/
+
 
 
 /*Rota para adicionar nova residencia*/
 $router->post('/storeResidence', 'ResidenciaController@store');
+/*Rota para listar residencias*/
 $router->get('/listResidences', 'ResidenciaController@listResidences');
+/*Rota para listar Coletas*/
+$router->get('/listCollects', 'ResidenciaController@listCollects');
+/*Rota para o IoT acessar e gravar os dados da coleta*/
+$router->post('/collect', 'ResidenciaController@collect');
+
